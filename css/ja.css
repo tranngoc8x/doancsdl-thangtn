@@ -1,0 +1,187 @@
+/*
+# ------------------------------------------------------------------------
+# JA Mesolite II template for Joomla 1.5
+# ------------------------------------------------------------------------
+# Copyright (C) 2004-2010 JoomlArt.com. All Rights Reserved.
+# @license - PHP files are GNU/GPL V2. CSS / JS are Copyrighted Commercial,
+# bound by Proprietary License of JoomlArt. For details on licensing, 
+# Please Read Terms of Use at http://www.joomlart.com/terms_of_use.html.
+# Author: JoomlArt.com
+# Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+# Redistribution, Modification or Re-licensing of this file in part of full, 
+# is bound by the License applied. 
+# ------------------------------------------------------------------------
+*/
+div.vm_element {
+	left:-999em;
+	position:absolute;
+	text-align: center;
+}
+.productPrice {
+	font-weight: bold;
+}
+.addtocart_button_module,
+.notify_button,
+input.addtocart_button {
+	padding: 0 20px 0 0;
+	width: 82px;
+	height: 22px;
+	background: url(../Images/bt-addtocart.gif) no-repeat left top #00A9DD;
+	border: none;
+	text-indent: 20px;
+	color: #FFFFFF;
+	display: block;
+	font-weight: bold;
+	margin:0 auto;
+	text-align: center;
+	line-height: 22px;
+	margin-top: 5px;
+	cursor: pointer;
+	direction: ltr;
+}
+.addtocart_button_module:hover,
+.addtocart_button_module:active,
+.notify_button:hover,
+.notify_button:active,
+input.addtocart_button:hover,
+input.addtocart_button:active {
+	background-color: #666666;
+	background-position: left -22px;
+	color: #FFFFFF;
+}
+ 
+#vmMainPage a.category:hover,
+#vmMainPage a.category:focus,
+#vmMainPage a.category:active {
+	color: #00A9DD;
+	text-decoration: none;
+}
+ 
+/* YourCart Module */
+#ja-vmcart {
+	position: absolute;
+	top: 0;
+	right: 15px;
+	width: 200px;
+	height: 74px;
+	z-index: 10;
+}
+#ja-vmcart div.moduletable {
+	border: none;
+	background: url(../Images/vmcart-bg.gif) no-repeat right 15px #FFFFFF;
+	overflow: hidden;
+	height: 100px;
+	padding: 0 15px;
+}
+#ja-vmcart div.moduletable h3 {
+	margin: 0;
+	padding: 15px 0 10px;
+	background: none;
+	text-align: center;
+	border: none;
+}
+div.vm-showcart a {
+	display: block;
+	width: 80px;
+	height: 22px;
+	line-height: 21px;
+	margin-left: 45px;
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: url(../Images/bt-viewcart.gif) no-repeat #00A9DD;
+}
+div.vm-showcart a:hover,
+div.vm-showcart a:focus,
+div.vm-showcart a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+div.vm-total-pro{
+	margin-top: 3px;
+	text-align: center;
+	width:100%;
+}
+/*Categories Module*/
+a.mainlevel {
+	display: block;
+	outline: none;
+	padding: 8px 15px 9px;
+	margin: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #666666;
+	border-top: 1px solid #E6E6E6;
+	background: url(../Images/arrow.png) no-repeat 92% 14px;
+}
+a.mainlevel:hover, a.mainlevel:active, a.mainlevel:focus  {
+	background: url(../Images/arrow.png) no-repeat 92% 14px #F7F7F7;
+	text-decoration: none;
+}
+ 
+/*Slidder Module*/
+#ja-slider {
+	position: relative;
+	margin: 15px 15px 0;
+}
+#ja-slider-left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30px;
+}
+#ja-slide-left-img, .ja-slide-left-img, #ja-slide-right-img, .ja-slide-right-img {
+	position: absolute;
+	top: 70px;
+	left: 3px;
+	cursor: pointer;
+}
+#ja-slider-center, .ja-slider-center {
+	left: 30px;
+	height: 165px;
+}
+#ja-slider-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30px;
+}
+
+.imageCart img
+{
+	width: 60px;
+}
+.CartItems tr
+{
+	background: none !important;
+}
+.CartItems th
+{
+	text-align: center;
+}
+.CartItems input[type="text"] 
+{
+	width: 80px;	
+}
+ 
+.delItem
+{
+width: 16px;
+height: 16px;
+text-indent: -9999px;
+display: block;
+background: transparent url(../Images/del-item.png) center center no-repeat;	
+}
+.actioncart
+{
+	display: inline-block;	
+	
+}
+.actioncart-update
+{
+	background: transparent url(../Images/bt-updatecart.png) top center no-repeat;
+}
+.CartItems td
+{
+	padding:0 !important;
+}
