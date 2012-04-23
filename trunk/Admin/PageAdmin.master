@@ -1,0 +1,200 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PageAdmin.master.cs" Inherits="PageAdmin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SYSTEMS ADMINISTRATOR</title>
+	<link rel="stylesheet" href="../css/admin/reset.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/admin/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/admin/invalid.css" type="text/css" media="screen" />	
+	<script type="text/javascript" src="../js/admin/jquery-1.3.2.min.js"></script>
+	<!-- jQuery Configuration -->
+	<script type="text/javascript" src="../js/admin/simpla.jquery.configuration.js"></script>
+	<!-- Facebox jQuery Plugin -->
+	<script type="text/javascript" src="../js/admin/facebox.js"></script>
+	<!-- jQuery WYSIWYG Plugin -->
+	<script type="text/javascript" src="../js/admin/jquery.wysiwyg.js"></script>
+	<link type="text/css" href="../css/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+	 
+	<script type="text/javascript" src="../js/jquery-ui-1.8.18.custom.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			// Datepicker
+			$('.datepicker').datepicker({
+				 dateFormat: 'dd-mm-yy',
+				 minDate: getFormattedDate(new Date()) 
+		    });
+		 });
+		 function getFormattedDate(date) {
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear().toString().slice(2);
+            return day + '-' + month + '-' + year;
+        }
+	</script>
+	
+	
+	<!-- Internet Explorer .png-fix -->
+	<!--[if IE 6]>
+		<script type="text/javascript" src="../js/admin/DD_belatedPNG_0.0.7a.js"></script>
+		<script type="text/javascript">
+			DD_belatedPNG.fix('.png_bg, img, li');
+		</script>
+	<![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="body-wrapper"> <!-- Wrapper for the radial gradient background -->
+             <div id="sidebar"><div id="sidebar-wrapper"> <!-- Sidebar with logo and menu -->
+			
+			    <h1 id="sidebar-title"><a href="#">Administrator</a></h1>
+		  
+			    <!-- Logo (221px wide) -->
+			    <a href="#"><img id="logo" src="../Images/admin/logo.png" alt="Systems Management" /></a>
+                
+			    <!-- Sidebar Profile links -->
+			    <div id="profile-links">
+				    Chào , <a href="#" title="Edit your profile"><%=Session["fullname"].ToString() %></a><br />
+				    <br />
+				    <a href="../Default.aspx" title="View the Site" target="_blank">Xem website</a> | 
+                    <asp:LinkButton ID="lbtSingout" ToolTip="Singout" runat="server" 
+                        onclick="lbtSingout_Click">Thoát</asp:LinkButton>
+			    </div>        
+			
+			    <ul id="main-nav">  <!-- Accordion Menu -->
+				
+				    <li>
+                        <asp:HyperLink CssClass="nav-top-item" NavigateUrl="#" ID="phome" runat="server"> Trang chủ</asp:HyperLink>
+					    
+                          <ul>
+                            <li>
+                                <asp:HyperLink ID="DEFAULT" NavigateUrl="~/Admin/Default.aspx" runat="server">Hóa đơn</asp:HyperLink>
+                            </li>
+
+                            <li><a href="#">Thống kê</a></li>
+                          </ul>  
+                            
+                    </li>
+				
+				    <li> 
+					     
+                        <asp:HyperLink ID="products" CssClass="nav-top-item" runat="server">Sản phẩm</asp:HyperLink>
+					    <ul>
+						     <li>
+                                 <asp:HyperLink ID="link_danhmucsp" runat="server" NavigateUrl="~/Admin/NhomSP.aspx">Danh mục sản phẩm</asp:HyperLink>
+						     </li>
+                              <li><asp:HyperLink ID="link_themdmsp" runat="server" NavigateUrl="~/Admin/NhomSPadd.aspx">Thêm mới danh mục</asp:HyperLink></li>
+						    <li><asp:HyperLink NavigateUrl="~/Admin/Products.aspx" ID="sanpham" runat="server">Danh sách sản phẩm</asp:HyperLink></li> <!-- Add class "current" to sub menu items also -->
+                            
+                             <li><asp:HyperLink NavigateUrl="~/Admin/SanPhamAdd.aspx" ID="addsanpham" runat="server">Thêm mới sản phẩm</asp:HyperLink></li>
+					    </ul>
+				    </li>
+				
+				    <li>
+                        <asp:HyperLink ID="news" CssClass="nav-top-item" runat="server">Tin tức</asp:HyperLink>
+					    
+					    <ul>
+						    <li><asp:HyperLink ID="link_danhsachbaiviet" runat="server" NavigateUrl="~/Admin/News.aspx">Danh sách bài viết</asp:HyperLink></li>
+						    <li><asp:HyperLink ID="link_themmoibaiviet" runat="server" NavigateUrl="~/Admin/NewsAdd.aspx">Thêm mới bài viết</asp:HyperLink></li>
+					    </ul>
+				    </li>
+				
+				   
+				    <li>
+                        <asp:HyperLink ID="setting" CssClass="nav-top-item" runat="server">Cài đặt</asp:HyperLink>
+			
+					    <ul>
+						    <li><a href="#">Website</a></li>
+						    <li><a href="#">Thông tin cá nhân</a></li>
+						    <li><a href="#">Người dùng</a></li>
+					    </ul>
+				    </li>      
+				
+			    </ul> <!-- End #main-nav -->
+			
+			    <div id="messages" style="display: none"> <!-- Messages are shown when a link with these attributes are clicked: href="#messages" rel="modal"  -->
+				
+				    <h3>3 Messages</h3>
+			 
+				    <p>
+					    <strong>17th May 2009</strong> by Admin<br />
+					    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue.
+					    <small><a href="#" class="remove-link" title="Remove message">Remove</a></small>
+				    </p>
+			 
+				    <p>
+					    <strong>2nd May 2009</strong> by Jane Doe<br />
+					    Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
+					    <small><a href="#" class="remove-link" title="Remove message">Remove</a></small>
+				    </p>
+			 
+				    <p>
+					    <strong>25th April 2009</strong> by Admin<br />
+					    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue.
+					    <small><a href="#" class="remove-link" title="Remove message">Remove</a></small>
+				    </p>
+			
+				
+			    </div> <!-- End #messages -->
+			
+		    </div>
+           </div> <!-- End #sidebar -->
+           <div id="main-content"> <!-- Main Content Section with everything -->
+			
+			<noscript> <!-- Show a notification if the user has disabled javascript -->
+				<div class="notification error png_bg">
+					<div>
+						Javascript is disabled or is not supported by your browser. Please <a href="http://browsehappy.com/" title="Upgrade to a better browser">upgrade</a> your browser or <a href="http://www.google.com/support/bin/answer.py?answer=23852" title="Enable Javascript in your browser">enable</a> Javascript to navigate the interface properly.
+					</div>
+				</div>
+			</noscript>
+			
+			<!-- Page Head -->
+			<h2>Quản trị website</h2>
+			 
+			<ul class="shortcut-buttons-set">
+				
+				<li><a class="shortcut-button new-article" href="NewsAdd.aspx"><span class="png_bg">
+					Thêm bài viết
+				</span></a></li>
+				
+				<li><a class="shortcut-button new-page" href="SanPhamAdd.aspx"><span class="png_bg">
+					Thêm sản phẩm
+				</span></a></li>
+				
+				<li><a class="shortcut-button upload-image" href="NhomSPadd.aspx"><span class="png_bg">
+					Thêm danh mục
+				</span></a></li>
+				
+				<li><a class="shortcut-button add-event" href="#"><span class="png_bg">
+					Other
+				</span></a></li>
+				
+				<li><a class="shortcut-button manage-comments" href="#messages" rel="modal"><span class="png_bg">
+					Liên hệ
+				</span></a></li>
+				
+			</ul><!-- End .shortcut-buttons-set -->
+			<div class="clear"></div> <!-- End .clear -->
+            <div class="content-box"><!-- Start Content Box -->		
+                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server"></asp:contentplaceholder>
+			</div> <!-- End .content-box -->
+                
+
+         <div id="footer">
+				<small>
+						&#169; Copyright 2012. Tran Ngoc Systems | <a href="#">Top</a>
+				</small>
+			</div><!-- End #footer -->
+			
+		</div> <!-- End #main-content -->
+		
+	</div>        
+    </form>
+     
+</form>	 
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CSDL", ".", "{48609CFB-9E95-4701-BB41-26B4E589F4B5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/CSDL"
+		Debug.AspNetCompiler.PhysicalPath = "F:\HOCVIEN\KTQS\ky2\doanCSDL\CSDL\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CSDL\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/CSDL"
+		Release.AspNetCompiler.PhysicalPath = "F:\HOCVIEN\KTQS\ky2\doanCSDL\CSDL\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CSDL\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56058"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48609CFB-9E95-4701-BB41-26B4E589F4B5}.Debug|.NET.ActiveCfg = Debug|.NET
+		{48609CFB-9E95-4701-BB41-26B4E589F4B5}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

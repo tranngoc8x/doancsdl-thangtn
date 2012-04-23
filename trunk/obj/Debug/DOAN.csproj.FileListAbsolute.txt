@@ -1,0 +1,13 @@
+F:\document\HOCVIEN\k2\doanCSDL\DOAN\DOAN\obj\Debug\ResolveAssemblyReference.cache
+F:\document\HOCVIEN\k2\doanCSDL\DOAN\DOAN\bin\DOAN.dll
+F:\document\HOCVIEN\k2\doanCSDL\DOAN\DOAN\bin\DOAN.pdb
+F:\document\HOCVIEN\k2\doanCSDL\DOAN\DOAN\obj\Debug\DOAN.dll
+F:\document\HOCVIEN\k2\doanCSDL\DOAN\DOAN\obj\Debug\DOAN.pdb
+F:\HOCVIEN\KTQS\ky2\doanCSDL\DOAN\DOAN\bin\DOAN.dll
+F:\HOCVIEN\KTQS\ky2\doanCSDL\DOAN\DOAN\bin\DOAN.pdb
+F:\HOCVIEN\KTQS\ky2\doanCSDL\DOAN\DOAN\obj\Debug\ResolveAssemblyReference.cache
+F:\HOCVIEN\KTQS\ky2\doanCSDL\DOAN\DOAN\obj\Debug\DOAN.dll
+F:\HOCVIEN\KTQS\ky2\doanCSDL\DOAN\DOAN\obj\Debug\DOAN.pdb
+F:\HOCVIEN\KTQS\ky2\doanCSDL\CSDL\obj\Debug\ResolveAssemblyReference.cache
+F:\HOCVIEN\KTQS\ky2\doanCSDL\CSDL\obj\Debug\DOAN.dll
+F:\HOCVIEN\KTQS\ky2\doanCSDL\CSDL\obj\Debug\DOAN.pdb
