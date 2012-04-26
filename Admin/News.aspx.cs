@@ -17,22 +17,6 @@ public partial class Admin_Default2 : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-
-            //    if (Notification.Text.Equals("") == false)
-            //    {
-            //        Session["Notification"] = "";
-            //    }
-            //    else
-            //    {
-            //        Notification.Text = Session["Notification"].ToString();
-
-            //    }
-            //}
-            //else
-            //{
-            //    Session["Notification"] = false;
-            //    Notification.Text = "";
-            //}
         }
     }
     protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
@@ -45,23 +29,5 @@ public partial class Admin_Default2 : System.Web.UI.Page
             DanhSachBaiVet.Delete();
             Response.Redirect("News.aspx");
         }
-        //if (e.CommandName == "EditNSP")
-        //{
-        //    ListViewDataItem data = (ListViewDataItem)e.Item;
-        //    int id = (int)ListView1.DataKeys[data.DisplayIndex].Value;
-        //    //xong
-        //    SqlCommand cmd = new SqlCommand("A_News_Edit_Select",conn);
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    cmd.Parameters.AddWithValue("@pass", id);
-        //    SqlDataReader dreader;
-        //    conn.Open();
-        //    dreader = cmd.ExecuteReader();
-        //    if (dreader.Read()) {
-
-        //    }
-
-
-        //   Response.Redirect("NhomSP.aspx");
-        //}
     }
 }
