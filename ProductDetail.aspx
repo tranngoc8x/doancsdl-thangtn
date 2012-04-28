@@ -26,7 +26,9 @@
 		                <td align="left" width="33%" valign="top">
 		                <strong>Giá bán :</strong>      	
 		                <span class="productPrice">$ <%# Eval("DonGia") %></span> . <span class="productPrice"> Trạng thái :</span>  <%#Convert.ToInt32(Eval("Soluong")) > 0 ? "<font color='green'>Còn hàng</font>" : "<font color='red'>Hết hàng</font>" %>
-		                <br></td>
+		                <br>
+		                <font color="red" size="3"><strong>Giảm giá : $ <%# Eval("Giamgia") %></strong></font>
+		                </td>
 		                <td valign="top"><br></td>
 	                </tr>
 	                <tr>

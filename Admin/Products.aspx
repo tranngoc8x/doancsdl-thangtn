@@ -29,6 +29,7 @@
 	                                        <td>$<%# Eval("DonGia") %></td>
 	                                        <td><%# Eval("TenNSP") %></td>
 	                                          <td align="center">
+	                                            <asp:HyperLink rel="modal" ID="edit" NavigateUrl='<%# Eval("MaSP","ProductDetail.aspx?id={0}") %>' runat="server" ToolTip="Xem chi tiết sản phẩm"><img src="../Images/admin/icons/views.png" alt="Xem chi tiết sản phẩm" /></asp:HyperLink>&nbsp;
                                                  <a href="SanphamEdit.aspx?id=<%# Eval("MaSP") %>" title="Sửa"><img src="../Images/admin/icons/pencil.png" alt="Sửa" /></a>&nbsp;
 		                                         <asp:LinkButton CommandName="DeleteProducts" ID="Delete" runat="server"><img src="../Images/admin/icons/cross.png" alt="Xóa" /></asp:LinkButton>
                                           </td>

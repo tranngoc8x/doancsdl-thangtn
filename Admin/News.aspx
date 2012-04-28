@@ -40,6 +40,7 @@
                                           <td align="center"><%# Eval("Ngaydang") %></td>
                                           <td align="center"><%# Convert.ToInt32(Eval("Trangthai"))==1?"Hiển thị":"Ẩn" %></td>
                                           <td align="center">
+                                                <asp:HyperLink rel="modal" ID="edit" NavigateUrl='<%# Eval("MaTin","NewsDetail.aspx?id={0}") %>' runat="server" ToolTip="Xem chi tiết tin"><img src="../Images/admin/icons/views.png" alt="Xem chi tiết tin" /></asp:HyperLink>&nbsp;
                                                  <a href="NewsEdit.aspx?id=<%# Eval("MaTin") %>" title="Sửa"><img src="../Images/admin/icons/pencil.png" alt="Sửa" /></a>&nbsp;
 		                                         <asp:LinkButton CommandName="DeleteNews" ID="Delete" runat="server"><img src="../Images/admin/icons/cross.png" alt="Xóa" /></asp:LinkButton>
                                           </td>

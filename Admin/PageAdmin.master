@@ -104,12 +104,11 @@
 				
 				   
 				    <li>
-                        <asp:HyperLink ID="setting" CssClass="nav-top-item" runat="server">Cài đặt</asp:HyperLink>
+                        <asp:HyperLink ID="setting" CssClass="nav-top-item" runat="server">Người dùng</asp:HyperLink>
 			
 					    <ul>
-						    <li><a href="#">Website</a></li>
-						    <li><a href="#">Thông tin cá nhân</a></li>
-						    <li><a href="#">Người dùng</a></li>
+						    <li><asp:HyperLink ID="link_personal" runat="server" NavigateUrl="~/Admin/PesonalPage.aspx">Thông tin cá nhân</asp:HyperLink></li>
+						    <li><asp:HyperLink ID="link_changepass" runat="server" NavigateUrl="~/Admin/ChangePass.aspx">Đổi mật khẩu</asp:HyperLink></li>
 					    </ul>
 				    </li>      
 				
@@ -169,7 +168,7 @@
 					Thêm danh mục
 				</span></a></li>
 				
-				<li><a class="shortcut-button add-event" href="#"><span class="png_bg">
+				<li><a class="shortcut-button add-event" href="Customer.aspx"><span class="png_bg">
 					Khách hàng
 				</span></a></li>
 				

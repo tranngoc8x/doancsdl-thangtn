@@ -102,6 +102,31 @@ using System.Data.SqlClient;
             conn.Close();
             return str;
         }
+        public static String[] User(int id)
+        {
+            String[] str = new String[9] { "", "", "", "", "", "", "", "", "" };
+            SqlConnection conn = new SqlConnection(Connection.Connec);
+            SqlCommand cmd = new SqlCommand("A_PersonalInfor", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataReader dreader;
+            conn.Open();
+            dreader = cmd.ExecuteReader();
+            if (dreader.Read())
+            {
+                str[0] = dreader.GetValue(0).ToString();
+                str[1] = dreader.GetValue(1).ToString();
+                str[2] = dreader.GetValue(2).ToString();
+                str[3] = dreader.GetValue(3).ToString();
+                str[4] = dreader.GetValue(4).ToString();
+                str[5] = dreader.GetValue(5).ToString();
+                str[6] = dreader.GetValue(6).ToString();
+                str[7] = dreader.GetValue(7).ToString();
+                str[8] = dreader.GetValue(8).ToString();
+            }
+            conn.Close();
+            return str;
+        }
     }
     public class LoginCus
     {
