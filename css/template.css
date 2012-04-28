@@ -1670,3 +1670,48 @@ input.addtocart_button {
 	display: inline-block;
 	border: 1px solid #cccccc;
 }
+#register
+{
+	margin: 0 auto;	
+}
+#register input[type="text"],#register input[type="password"]{
+	width: 220px;
+	padding: 1px;
+	height: 24px;
+	border-radius: 4px;
+	border:1px solid #ACE;	
+}
+#register textarea{
+	padding: 1px;
+	border-radius: 4px;
+	border:1px solid #ACE;	
+}
+#register label{
+	margin-left: 130px;
+	display: inline-block;
+	width: 80px;
+	margin-right: 10px;
+}
+#register .btnregis
+{
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	background:#39d url('../Images/bg-btn-blue.png') repeat-x scroll 0 0;
+	border:1px solid #39D;
+	color:#fff;
+	text-shadow:0 -1px 0 #39d;
+	padding:4px 10px 5px;
+	font-size:11px;
+	margin: 0 auto;
+	font-weight:bold;
+}
+#notice
+{
+	height: 30px;
+	line-height: 30px;
+	padding-left: 5px;
+	border-radius: 4px;
+	width: 500px;
+	margin: 0 auto;
+	border: 1px solid #ace;	
+}

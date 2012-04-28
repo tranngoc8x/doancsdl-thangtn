@@ -103,3 +103,28 @@ using System.Data.SqlClient;
             return str;
         }
     }
+    public class LoginCus
+    {
+        public static String[] Kiemtra(string user, string pass)
+        {
+            String[] str = new String[3] { "","",""};
+            SqlConnection conn = new SqlConnection(Connection.Connec);
+            SqlCommand cmd = new SqlCommand("CusLogin", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@user", user);
+            cmd.Parameters.AddWithValue("@pass", pass);
+            SqlDataReader dreader;
+            conn.Open();
+            dreader = cmd.ExecuteReader();
+            if (dreader.Read())
+            {
+
+                str[0] = dreader.GetValue(0).ToString();
+                str[1] = dreader.GetValue(1).ToString();
+                str[2] = dreader.GetValue(2).ToString();
+            }
+            
+            conn.Close();
+            return str;
+        }
+    }

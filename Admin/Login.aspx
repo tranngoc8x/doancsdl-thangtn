@@ -55,7 +55,7 @@
                         <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="txtUserName">Tài khoản</asp:Label>
                         <asp:TextBox ID="txtUserName" runat="server" class="text-input"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="txtUserName"
-                            ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
+                            ErrorMessage="Username is required." ToolTip="Username is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                     </p>
                     <div class="clear">
                     </div>
