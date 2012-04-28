@@ -15,6 +15,18 @@ public partial class Dangky : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            //string temp = Session["fullname"].ToString();
+            if (Session["uid"] != null)
+            {
+                Response.Redirect("Default.aspx");
+            }
+        }
+    }
+    protected void register_Click(object sender, EventArgs e)
+    {
+        SqlDangky.Insert();
+        Response.Redirect("Default.aspx");
     }
 }

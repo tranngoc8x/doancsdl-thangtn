@@ -72,10 +72,10 @@
 	                                <asp:HyperLink ID="lnkTinTuc" runat="server" CssClass="mega" NavigateUrl="~/News.aspx" ><span class="menu-title"><span class="menu-title">Tin tức</span><span class="menu-desc">News and Events</span></span></asp:HyperLink>
 	                            </li>
 	                            <li runat="server" id="lidangnhap" class="mega">
-	                                <asp:HyperLink ID="lnkdangnhap" runat="server" CssClass="mega" NavigateUrl="~/Dangnhap.aspx" ><span class="menu-title"><span class="menu-title">Đăng nhập</span><span class="menu-desc">Singin</span></span></asp:HyperLink>
+	                                <asp:HyperLink ID="lnkdangnhap" runat="server" CssClass="mega" NavigateUrl="~/Dangnhap.aspx" ><span class="menu-title"><span class="menu-title">Đăng nhập</span><span class="menu-desc">Login</span></span></asp:HyperLink>
 	                            </li>
 	                            <li runat="server" id="lidangky" class="mega">
-	                                <asp:HyperLink ID="lnkdangky" runat="server" CssClass="mega" NavigateUrl="~/Dangky.aspx" ><span class="menu-title"><span class="menu-title">Đăng ký</span><span class="menu-desc">Singup</span></span></asp:HyperLink>
+	                                <asp:HyperLink ID="lnkdangky" runat="server" CssClass="mega" NavigateUrl="~/Dangky.aspx" ><span class="menu-title"><span class="menu-title">Đăng ký</span><span class="menu-desc">Register</span></span></asp:HyperLink>
 	                            </li>
                                 <li runat="server" id="licontact" class="mega">
 	                                <asp:HyperLink ID="hplContact" runat="server" CssClass="mega"  NavigateUrl="~/Contact.aspx"><span class="menu-title">Liên hệ</span><span class="menu-desc">Contact</span></asp:HyperLink>
@@ -174,7 +174,7 @@
 	                        <div class="ja-colswrap clearfix ja-l1">
 		                        <div class="ja-col  column" style="width:100%">
 			                        <div class="ja-moduletable moduletable_menuhilite  clearfix" id="Mod78">
-				                        <h3>Products Categoriess</h3>
+				                        <h3>Products Categories</h3>
 				                        <div class="ja-box-ct clearfix">
                                              
                                             
@@ -193,18 +193,25 @@
 			                        <div class="ja-moduletable moduletable  clearfix" id="Mod18">
 				                        <h3>Login Form</h3>
 				                        <div class="ja-box-ct clearfix">
-					                        <form action="index.php" method="post" name="form-login" id="form-login">
+					                        <%
+                                                if (Session["uid"] == null)
+                                                {
+					                        %>
 						                        <fieldset class="input">
 							                        <p id="form-login-username">
 								                        <label for="username">
 								                        Username<br>
-								                        <input value="" name="username" id="username" class="inputbox" alt="username" size="18" type="text">
+								                        <asp:TextBox ID="username" runat="server"  class="inputbox">
+								                        </asp:TextBox><asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="username"
+                                                            ErrorMessage="<br />Username is required." ToolTip="Username is required." ValidationGroup="Login1"></asp:RequiredFieldValidator>
 								                        </label>
 							                        </p>
 							                        <p id="form-login-password">
 								                        <label for="passwd">
 									                        Password<br>
-									                        <input name="passwd" id="passwd" class="inputbox" size="18" alt="password" type="password">
+									                        <asp:TextBox ID="password" class="inputbox" runat="server" TextMode="Password"></asp:TextBox>
+                                                            <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="password"
+                                                                ErrorMessage="Password is required." ToolTip="<br />Password is required." ValidationGroup="Login1"></asp:RequiredFieldValidator>
 								                        </label>
 							                        </p>
 							                        <p id="form-login-remember">
@@ -212,12 +219,18 @@
 									                        Remember Me<input name="remember" id="remember" value="yes" alt="Remember Me" type="checkbox">
 								                        </label>
 							                        </p>
-							                        <input name="Submit" class="button" value="Login" type="submit">
+							                   
+							                        <asp:Button ID="btnLogin" runat="server" BorderStyle="None" class="button" BorderWidth="0" CommandName="Login"
+                            CssClass="button" Font-Names="Arial" Font-Overline="False" Text="Đăng nhập" ValidationGroup="Login1"
+                            OnClick="btnLogin_Click" /><asp:Label ID="FailureText" ForeColor="red" runat="server"></asp:Label>
 						                        </fieldset>
-						                        <ul>
-							                        <li><a href="http://localhost/ja_mesolite_ii_j15/index.php?option=com_user&amp;view=register">Create an account</a></li>
-						                        </ul>
-					                        </form>
+						                         
+						                        <% }
+                                                else
+                                                { %>
+						                        Xin chào <%=Session["cusname"]%>
+                                            <asp:LinkButton ID="logout" runat="server" onclick="logout_Click">Logout</asp:LinkButton>
+						                        <%} %>
 				                        </div>
 			                        </div>
 			                        <div class="ja-moduletable moduletable  clearfix" id="Mod20">
