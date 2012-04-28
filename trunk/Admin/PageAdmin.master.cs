@@ -63,6 +63,14 @@ public partial class PageAdmin : System.Web.UI.MasterPage
                 news.CssClass = "nav-top-item current";
                 link_themmoibaiviet.CssClass = ("current");
                 break;
+            case "PesonalPage.aspx":
+                setting.CssClass = "nav-top-item current";
+                link_personal.CssClass = ("current");
+                break;
+            case "ChangePass.aspx":
+                setting.CssClass = "nav-top-item current";
+                link_changepass.CssClass = ("current");
+                break;
             default:
                 phome.CssClass = "nav-top-item current";
                 DEFAULT.CssClass=("current");
