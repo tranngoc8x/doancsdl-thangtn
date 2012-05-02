@@ -181,6 +181,17 @@ background: transparent url(../Images/del-item.png) center center no-repeat;
 {
 	background: transparent url(../Images/bt-updatecart.png) top center no-repeat;
 }
+.actioncart-checkout{
+	background: transparent url(../Images/bt-notify.gif) top center no-repeat;
+}
+.actioncart-changeadd{
+	width: auto;
+	background: #00A9DD !important;
+	border-radius: 4px;
+}
+.actioncart-changeadd:hover{
+	background: #AEAEB3 !important;
+}
 .CartItems td
 {
 	padding:0 !important;

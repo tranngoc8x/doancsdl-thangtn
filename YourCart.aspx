@@ -4,7 +4,7 @@
 	<div class="ja-moduletable moduletable  clearfix" id="Mod79">
 	    <h3>Giỏ hàng của bạn</h3><div class="ja-box-ct clearfix">
 			
-			<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns=False CssClass="CartItems"  Width=100%>
+			<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns=False CssClass="CartItems"  Width='100%'>
                 <Columns>
                   <asp:TemplateField HeaderText="Mã sản phẩm"  Visible="false">
                         <ItemTemplate>
@@ -58,14 +58,14 @@
 					</asp:TemplateField>
 				</Columns>
 			</asp:GridView>
-            <asp:LinkButton ID="ContBuy" runat="server" Text="Back" onclick="ContBuy_Click" class="addtocart_button_module actioncart" ToolTip="Tiếp tục mua hàng">Mua thêm</asp:LinkButton>
+            <asp:LinkButton ID="ContBuy" runat="server" Text="Back" onclick="ContBuy_Click" class="addtocart_button_module actioncart" ToolTip="Tiếp tục mua hàng">Mua 
+            thêm</asp:LinkButton>
              
-            <asp:LinkButton ID="Update" runat="server" Text="Cập nhật" class="addtocart_button_module actioncart actioncart-update" ToolTip="Cập nhật giỏ hàng" onclick="Update_Click">Cập nhật</asp:LinkButton>
-            
-            <asp:LinkButton ID="Buy" runat="server" Text="Mua" 
-                class="addtocart_button_module actioncart actioncart-update" 
-                ToolTip="Cập nhật giỏ hàng" onclick="Buy_Click">Mua</asp:LinkButton>
-
+            <asp:LinkButton ID="Update" runat="server" Text="Cập nhật" class="addtocart_button_module actioncart actioncart-update" ToolTip="Cập nhật giỏ hàng" onclick="Update_Click">Cập 
+            nhật</asp:LinkButton>
+             
+            <asp:HyperLink class="addtocart_button_module actioncart actioncart-checkout"  NavigateUrl="Checkout.aspx" ID="checkout" runat="server">Tiếp 
+            tục</asp:HyperLink>
 		    <div class="clear"><br /></div>
 		</div>
 	</div>

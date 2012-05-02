@@ -29,7 +29,7 @@ public partial class Contact : System.Web.UI.Page
 
         try
         {
-            mail.From = new MailAddress(txtEmail.Text, txtHoTen.Text + " gửi từ form liên hệ", System.Text.Encoding.UTF8);
+            mail.From = new MailAddress(txtEmail.Text, txtName.Text + " gửi từ form liên hệ", System.Text.Encoding.UTF8);
             mail.To.Add("tranngocthang89@mail.com");
             mail.Subject = "[Tran Ngoc Systems] -Email liên hệ";
             mail.Body = MailBody();
@@ -38,14 +38,15 @@ public partial class Contact : System.Web.UI.Page
             mail.Priority = MailPriority.High;
             mail.IsBodyHtml = true;
             SmtpServer.Send(mail);
-            Label1.Text = "Cảm ơn bạn đã gửi thông điệp đến chúng tôi!";
+           // Label1.Text = "Cảm ơn bạn đã gửi thông điệp đến chúng tôi!";
             ResetFrom();
         }
-        catch (Exception ex) { Label1.Text = ex.Message.ToString(); }
+        catch (Exception ex) { //Label1.Text = ex.Message.ToString();
+        }
     }
     private void ResetFrom()
     {
-        txtHoTen.Text = "";
+        txtName.Text = "";
         txtDiaChi.Text = "";
         txtDienThoai.Text = "";
         txtEmail.Text = "";
@@ -55,12 +56,17 @@ public partial class Contact : System.Web.UI.Page
     private string MailBody()
     {
         string strHTML = "";
-        strHTML += "Họ và tên: " + txtHoTen.Text + "<br>";
+        strHTML += "Họ và tên: " + txtName.Text + "<br>";
         strHTML += "Địa chỉ: " + txtDiaChi.Text + "<br>";
         strHTML += "Điện thoại: " + txtDienThoai.Text + "<br>";
         strHTML += "Email: " + txtEmail.Text + "<br>";
         strHTML += "Đã gửi qua Form liên hệ với thông điệp:<br><b>";
         strHTML += txtNoiDung.Text + "</b>";
         return strHTML;
+    }
+    protected void btnadd_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.Insert();
+        Response.Redirect("Default.aspx");
     }
 }

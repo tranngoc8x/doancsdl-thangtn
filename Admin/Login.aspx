@@ -68,6 +68,7 @@
                     <div class="clear">
                     </div>
                     <p id="remember-password">
+                        <a href="../Default.aspx" title="View the Site" target="_blank">Xem website</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:CheckBox ID="RememberMe" runat="server" Text="" />Ghi nhớ
                     </p>
                     <div class="clear">

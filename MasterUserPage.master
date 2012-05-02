@@ -228,15 +228,17 @@
 						                        <% }
                                                 else
                                                 { %>
-						                        Xin chào <%=Session["cusname"]%>
-                                            <asp:LinkButton ID="logout" runat="server" onclick="logout_Click">Logout</asp:LinkButton>
-						                        <%} %>
+						                        Xin chào <%=Session["cusname"]%><br />
+                                            <asp:HyperLink ID="changeinf" NavigateUrl="ChangeInfor.aspx" runat="server">Thay đổi thông tin</asp:HyperLink>
+                                           - <asp:LinkButton ID="logout" runat="server" onclick="logout_Click">Thoát</asp:LinkButton><br />
+                                           <asp:HyperLink ID="changepass" NavigateUrl="#" runat="server">Đổi mật khẩu</asp:HyperLink>
+                                               <%} %>
 				                        </div>
 			                        </div>
 			                        <div class="ja-moduletable moduletable  clearfix" id="Mod20">
 				                       <h3>Weather Information</h3>
 				                       <br />
-                                            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Font-Names="Tahoma" Font-Size="11px" Width="80px">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Font-Names="Tahoma" Font-Size="11px" Width="80px">
                                                 <asp:ListItem Selected="True" Value="Hanoi.xml">Hà Nội</asp:ListItem>
                                                 <asp:ListItem Value="Haiphong.xml">Hải Phòng</asp:ListItem>
                                                 <asp:ListItem Value="HCM.xml">TP HCM</asp:ListItem>

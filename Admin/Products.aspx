@@ -37,7 +37,8 @@
                                     </ItemTemplate>
                                    
                                     <EmptyDataTemplate>
-                                        <span>No data was returned.</span>
+                                        <tr><td colspan=5><span>Không có bản ghi nào</span></td></tr>
+                       
                                     </EmptyDataTemplate>
                                     
                                     <LayoutTemplate>

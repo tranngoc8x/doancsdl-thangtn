@@ -36,20 +36,26 @@
                     <asp:TextBox ID="bith" class="text-input small-input"  runat="server"></asp:TextBox>
 				    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                         ControlToValidate="bith" ErrorMessage="* Ngày sinh không được để trống"></asp:RequiredFieldValidator>
+				   
 				</p>
 				<p>
 					<label>Điện thoại</label>
                     <asp:TextBox ID="phone" class="text-input small-input" runat="server"></asp:TextBox>
 				    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-                        ControlToValidate="phone" ErrorMessage="* Điện thoại không được để trống"></asp:RequiredFieldValidator>
+                        ControlToValidate="phone" ErrorMessage="* Điện thoại không được để trống" 
+                        Display="Dynamic"></asp:RequiredFieldValidator>
+                     
 				</p>
 				<p>
 					<label>Email</label>
                     <asp:TextBox ID="email" class="text-input small-input" runat="server"></asp:TextBox>
+				    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
+                        ControlToValidate="email" ErrorMessage="* Email không được để trống" 
+                        Display="Dynamic"></asp:RequiredFieldValidator>
 				    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                         ControlToValidate="email" ErrorMessage="* Email không đúng định dạng" 
                         ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
-                        ValidationGroup="emal"></asp:RegularExpressionValidator>
+                        ValidationGroup="emal" Display="Dynamic"></asp:RegularExpressionValidator>
 				</p>
 				<p>
 					<label>Địa chỉ</label>

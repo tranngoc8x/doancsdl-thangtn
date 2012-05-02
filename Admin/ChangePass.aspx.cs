@@ -17,4 +17,20 @@ public partial class Admin_ChangePass : System.Web.UI.Page
     {
 
     }
+    protected void btn_update_Click(object sender, EventArgs e)
+    {
+        int val = QueryAdmin.Changepass(Convert.ToInt32(Session["sid"]),oldpass.Text,newpass.Text);
+        if (val == 0)
+        {
+            oldpass.Text = "";
+            newpass.Text = "";
+            repass.Text = "";
+            //notification.Style="display:block";
+            ErrorMessage.Text = "Mật khẩu hiện tại không chính sác! Hãy kiểm tra lại.";
+        }
+        else
+        {
+            Response.Redirect("PesonalPage.aspx");
+        }
+    }
 }

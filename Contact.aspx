@@ -9,7 +9,7 @@
         <tr>
             <td style="width: 30%" colspan="2">
             Nếu bạn có bất cứ thắc mắc, ý kiến đóng góp hoặc câu hỏi gì liên quan đến website, 
-            hãy liên lạc với tôi bằng form dưới đây. Chúng tôi sẽ hồi âm bạn sớm nhất có thể. 
+            hãy liên lạc với tôi bằng form dưới đây. Chúng tôi sẽ trả lời bạn sớm nhất có thể. 
             Chúng tôi luôn cố gắng trả lời tất cả những email gửi tới.
                </td>
         </tr>
@@ -17,9 +17,9 @@
             <td style="width: 30%">
                 Họ và tên:<span class="style1"> *</span></td>
             <td style="width: 70%">
-                <asp:TextBox ID="txtHoTen" runat="server" Width="300px"  />&nbsp;
+                <asp:TextBox ID="txtName" runat="server" Width="300px"  />&nbsp;
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                    ControlToValidate="txtHoTen" ErrorMessage="* Vui lòng điền tên bạn" 
+                    ControlToValidate="txtName" ErrorMessage="* Vui lòng điền tên bạn" 
                     Display="Dynamic" />
             </td>
         </tr>
@@ -66,13 +66,25 @@
         </tr>
         <tr><td>&nbsp;</td>
             <td valign="top" align="left" id="LinkOfList">
-                <asp:Button ID="btnSend" runat="server" Text="Gửi liên hệ" 
-                    onclick="btnSend_Click"  class="buttonf"/>
-                </td>
-        </tr>
-        <tr>
-            <td valign="top" colspan="2" align="center" id="LinkOfList">
-                <asp:Label ID="Label1" runat="server"></asp:Label>
+                <asp:Button ID="btnadd" runat="server" Text="Gửi liên hệ"  class="button" 
+                    onclick="btnadd_Click"/>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:TNTCOMPUTERConnectionString %>" 
+                    InsertCommand="LienHe_Add" InsertCommandType="StoredProcedure" 
+                    SelectCommand="SELECT Contacts.* FROM Contacts">
+                    <InsertParameters>
+                        <asp:ControlParameter ControlID="txtName" Name="name" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="txtDienThoai" Name="phone" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="txtEmail" Name="email" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="txtDiaChi" Name="add" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="txtNoiDung" Name="noidung" PropertyName="Text" 
+                            Type="String" />
+                    </InsertParameters>
+                </asp:SqlDataSource>
                 </td>
         </tr>
         </table>

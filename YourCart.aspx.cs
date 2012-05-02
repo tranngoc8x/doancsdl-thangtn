@@ -60,7 +60,7 @@ public partial class YourCart : System.Web.UI.Page
             TextBox txtsl = (TextBox)gr.FindControl("txtsoluong");
             TextBox txtmsp = (TextBox)gr.FindControl("txtmasp");
             string idmsp = txtmsp.Text;
-            Buy.Text = idmsp;
+         //   Buy.Text = idmsp;
         }
     }
 }
