@@ -111,34 +111,17 @@
 						    <li><asp:HyperLink ID="link_changepass" runat="server" NavigateUrl="~/Admin/ChangePass.aspx">Đổi mật khẩu</asp:HyperLink></li>
 					    </ul>
 				    </li>      
-				
+				     <li>
+                        <asp:HyperLink ID="cuslh" CssClass="nav-top-item" runat="server">Khách hàng</asp:HyperLink>
+			
+					    <ul>
+						    <li><asp:HyperLink ID="link_cus" runat="server" NavigateUrl="~/Admin/Customer.aspx">Danh sách khách hàng</asp:HyperLink></li>
+						    <li><asp:HyperLink ID="link_lh" runat="server" NavigateUrl="~/Admin/Contact.aspx">Danh sách liên hệ</asp:HyperLink></li>
+					    </ul>
+				    </li>   
 			    </ul> <!-- End #main-nav -->
 			
-			    <div id="messages" style="display: none"> <!-- Messages are shown when a link with these attributes are clicked: href="#messages" rel="modal"  -->
-				
-				    <h3>3 Messages</h3>
-			 
-				    <p>
-					    <strong>17th May 2009</strong> by Admin<br />
-					    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue.
-					    <small><a href="#" class="remove-link" title="Remove message">Remove</a></small>
-				    </p>
-			 
-				    <p>
-					    <strong>2nd May 2009</strong> by Jane Doe<br />
-					    Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-					    <small><a href="#" class="remove-link" title="Remove message">Remove</a></small>
-				    </p>
-			 
-				    <p>
-					    <strong>25th April 2009</strong> by Admin<br />
-					    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue.
-					    <small><a href="#" class="remove-link" title="Remove message">Remove</a></small>
-				    </p>
-			
-				
-			    </div> <!-- End #messages -->
-			
+			   
 		    </div>
            </div> <!-- End #sidebar -->
            <div id="main-content"> <!-- Main Content Section with everything -->
@@ -152,7 +135,7 @@
 			</noscript>
 			
 			<!-- Page Head -->
-			<h2>Quản trị website</h2>
+			<%--<h2>Quản trị website</h2>--%>
 			 
 			<ul class="shortcut-buttons-set">
 				
@@ -172,7 +155,7 @@
 					Khách hàng
 				</span></a></li>
 				
-				<li><a class="shortcut-button manage-comments" href="#messages" rel="modal"><span class="png_bg">
+				<li><a class="shortcut-button manage-comments" href="Contact.aspx"><span class="png_bg">
 					Liên hệ
 				</span></a></li>
 				

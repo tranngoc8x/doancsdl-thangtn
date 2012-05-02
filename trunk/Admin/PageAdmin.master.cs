@@ -71,6 +71,14 @@ public partial class PageAdmin : System.Web.UI.MasterPage
                 setting.CssClass = "nav-top-item current";
                 link_changepass.CssClass = ("current");
                 break;
+            case "Customer.aspx":
+                cuslh.CssClass = "nav-top-item current";
+                link_cus.CssClass = ("current");
+                break;
+            case "Contact.aspx":
+                cuslh.CssClass = "nav-top-item current";
+                link_lh.CssClass = ("current");
+                break;
             default:
                 phome.CssClass = "nav-top-item current";
                 DEFAULT.CssClass=("current");
@@ -81,6 +89,6 @@ public partial class PageAdmin : System.Web.UI.MasterPage
     protected void lbtSingout_Click(object sender, EventArgs e)
     {
         Session.Abandon();
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/Admin/Default.aspx");
     }
 }

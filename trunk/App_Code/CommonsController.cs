@@ -44,6 +44,29 @@ using System.Data.SqlClient;
     }
     public class QueryAdmin
     {
+
+        public static int Changepass(int idnv,string oldpass,string newpass)
+        {
+            int str = 0;
+            SqlConnection conn = new SqlConnection(Connection.Connec);
+            SqlCommand cmd = new SqlCommand("A_DoiMK", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@pass", newpass);
+            cmd.Parameters.AddWithValue("@oldpass", oldpass);
+            cmd.Parameters.AddWithValue("@id", idnv);
+
+            SqlDataReader dreader;
+            conn.Open();
+            dreader = cmd.ExecuteReader();
+            if (dreader.Read())
+            {
+                str = Convert.ToInt32(dreader.GetValue(0));
+            }
+            conn.Close();
+            return str;
+        }
+
+
         public static string NSP(int id)
         {
             string str = "";
@@ -152,4 +175,28 @@ using System.Data.SqlClient;
             conn.Close();
             return str;
         }
+        public static String[] Customer(int id)
+        {
+            String[] str = new String[5] { "", "", "", "", "" };
+            SqlConnection conn = new SqlConnection(Connection.Connec);
+            SqlCommand cmd = new SqlCommand("Chitiet_Nguoimua", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataReader dreader;
+            conn.Open();
+            dreader = cmd.ExecuteReader();
+            if (dreader.Read())
+            {
+                str[0] = dreader.GetValue(5).ToString();
+                str[1] = dreader.GetValue(1).ToString();
+                str[2] = dreader.GetValue(2).ToString();
+                str[3] = dreader.GetValue(3).ToString();
+                str[4] = dreader.GetValue(4).ToString();
+            }
+            
+            conn.Close();
+            return str;
+        }
+
+        
     }

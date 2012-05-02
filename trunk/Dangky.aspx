@@ -22,15 +22,25 @@
         
         </p> 
         <p><label>ReType password  </label><asp:TextBox ID="repass" TextMode="Password" runat="server"></asp:TextBox>
+        
+            <asp:RequiredFieldValidator ControlToValidate="repass" 
+                ID="RequiredFieldValidator8" runat="server" 
+                ErrorMessage="* Nhắc lại mật khẩu" Display="Dynamic"></asp:RequiredFieldValidator>
+        
             <asp:CompareValidator ID="CompareValidator1" ControlToValidate="repass" 
                 ControlToCompare="pass" runat="server" 
-                ErrorMessage="* Mật khẩu không trùng nhau"></asp:CompareValidator>
+                ErrorMessage="* Mật khẩu không trùng nhau" Display="Dynamic"></asp:CompareValidator>
         </p> 
         <p><label>Email</label><asp:TextBox ID="email" runat="server"></asp:TextBox>
             
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" 
+                ControlToValidate="email" Display="Dynamic" 
+                ErrorMessage="* Email không được để trống"></asp:RequiredFieldValidator>
+            
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                 ControlToValidate="email" ErrorMessage="* Email không đúng định dạng" 
-                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+                Display="Dynamic"></asp:RegularExpressionValidator>
             
         
         </p> 
