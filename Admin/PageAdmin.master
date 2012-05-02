@@ -74,7 +74,9 @@
                                 <asp:HyperLink ID="DEFAULT" NavigateUrl="~/Admin/Default.aspx" runat="server">Hóa đơn</asp:HyperLink>
                             </li>
 
-                            <li><a href="#">Thống kê</a></li>
+                            <li>
+                            <asp:HyperLink ID="link_thongke" runat="server" NavigateUrl="~/Admin/Reports.aspx">Thống kê</asp:HyperLink>
+                            </li>
                           </ul>  
                             
                     </li>

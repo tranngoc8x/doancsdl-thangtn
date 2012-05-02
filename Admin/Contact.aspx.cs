@@ -10,13 +10,14 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using System.Data.SqlClient;
 
 public partial class Admin_Contact : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
-    }
+     }
     protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
     {
         if (e.CommandName == "DeleteLH")
@@ -26,6 +27,7 @@ public partial class Admin_Contact : System.Web.UI.Page
             DanhsachLienhe.DeleteParameters["id"].DefaultValue = id.ToString();
             DanhsachLienhe.Delete();
             Response.Redirect("Contact.aspx");
+
         }
     }
 }
