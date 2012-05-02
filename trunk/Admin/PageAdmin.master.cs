@@ -33,6 +33,11 @@ public partial class PageAdmin : System.Web.UI.MasterPage
                 phome.CssClass = "nav-top-item current";
                 DEFAULT.CssClass=("current");
                 break;
+            case "Reports.aspx":
+                phome.CssClass = "nav-top-item current";
+                link_thongke.CssClass = ("current");
+                break;
+                
             case "NhomSP.aspx":
                 products.CssClass = "nav-top-item current";
                 link_danhmucsp.CssClass=("current");
@@ -80,8 +85,8 @@ public partial class PageAdmin : System.Web.UI.MasterPage
                 link_lh.CssClass = ("current");
                 break;
             default:
-                phome.CssClass = "nav-top-item current";
-                DEFAULT.CssClass=("current");
+                products.CssClass = "nav-top-item current";
+                sanpham.CssClass = ("current");
                 break;
         }
     }
